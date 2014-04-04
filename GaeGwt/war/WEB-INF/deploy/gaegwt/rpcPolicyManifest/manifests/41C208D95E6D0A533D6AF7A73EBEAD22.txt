@@ -1,0 +1,2 @@
+serviceClass: fr.istic.gaegwt.client.GreetingService
+path: 7041F3264A14252D1CE6019B2E66E69A.gwt.rpc
