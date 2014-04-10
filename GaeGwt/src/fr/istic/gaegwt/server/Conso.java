@@ -20,6 +20,7 @@ import fr.istic.gaegwt.shared.Heater;
 import fr.istic.gaegwt.shared.Home;
 import fr.istic.gaegwt.shared.Person;
 
+@SuppressWarnings("serial")
 public class Conso  extends RemoteServiceServlet implements GestionConso{
 	private EntityManager manager;
 	private EntityManagerFactory factory;
@@ -28,6 +29,7 @@ public class Conso  extends RemoteServiceServlet implements GestionConso{
 		this.manager=manager;
 	}
 
+	
 	@Override
 	public void init() throws ServletException {
 		// TODO Auto-generated method stub
