@@ -15,8 +15,9 @@ import fr.istic.gaegwt.shared.Home;
 import fr.istic.gaegwt.shared.Person;
 
 
+@RemoteServiceRelativePath("conso")
 public interface GestionConso extends RemoteService{	
-	public Person createPerson(Person p)  throws ParseException;
+	public Person createPerson(Person p) ;
 	public Home createHome(Person p,Home h);
 	public Appareil createAppareil(Home h,  Appareil a);
 }

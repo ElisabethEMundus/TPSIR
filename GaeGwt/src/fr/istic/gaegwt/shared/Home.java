@@ -1,21 +1,24 @@
 package fr.istic.gaegwt.shared;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import org.datanucleus.api.jpa.annotations.Extension;
+
 @XmlRootElement
 @Entity
-public class Home {
+public class Home implements Serializable{
 
-	private Long id;
+	String id;
 	
 	private int nbpieces, superficie;
 	private String adresse, ip;
@@ -66,35 +69,29 @@ public class Home {
 		this.person = person;
 	}
 
-
-
-	private List<Heater> chauffages;
+	 
 	
-	private List<ElectronicDevice> equipements;
-	
-
-
 	public Home(int nbpieces, int superficie, String adresse, String ip) {
 
 		this.nbpieces=nbpieces;
 		this.superficie=superficie;
 		this.adresse=adresse;
 		this.ip=ip;
-		this.chauffages=new ArrayList<Heater>();
-		this.equipements=new ArrayList<ElectronicDevice>();
+ 
 
 	}
 
 
 	@Id
-	@GeneratedValue
-	public Long getId() {
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Extension(vendorName = "datanucleus", key = "gae.encoded-pk", value = "true")
+	public String getId() {
 		return id;
 	}
 
 
 
-	public void setId(Long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
@@ -111,27 +108,5 @@ public class Home {
 	}
 
 
-	@OneToMany(mappedBy = "home", cascade = CascadeType.PERSIST)
-	public List<Heater> getChauffages() {
-		return chauffages;
-	}
-
-
-
-	public void setChauffages(List<Heater> chauffages) {
-		this.chauffages = chauffages;
-	}
-
-
-	@OneToMany(mappedBy = "home", cascade = CascadeType.PERSIST)
-	public List<ElectronicDevice> getEquipements() {
-		return equipements;
-	}
-
-
-
-	public void setEquipements(List<ElectronicDevice> equipements) {
-		this.equipements = equipements;
-	}
 	
 }

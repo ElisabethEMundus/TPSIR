@@ -1,0 +1,23 @@
+com.google.gwt.i18n.shared.impl.DateRecord, true, true, true, true, com.google.gwt.i18n.shared.impl.DateRecord/3375188634, 3375188634
+com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException, true, true, true, true, com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException/3936916533, 3936916533
+com.google.gwt.user.client.rpc.RpcTokenException, true, true, false, false, com.google.gwt.user.client.rpc.RpcTokenException/2345075298, 2345075298
+com.google.gwt.user.client.rpc.XsrfToken, false, false, true, true, com.google.gwt.user.client.rpc.XsrfToken/4254043109, 4254043109
+fr.istic.gaegwt.client.GestionConso, false, false, false, false, _, 2504990883
+fr.istic.gaegwt.shared.Appareil, true, true, true, true, fr.istic.gaegwt.shared.Appareil/4099051105, 4099051105
+@ClientFields,fr.istic.gaegwt.shared.Appareil,id,consoMoy
+fr.istic.gaegwt.shared.ElectronicDevice, true, true, true, true, fr.istic.gaegwt.shared.ElectronicDevice/3447997162, 3447997162
+@ClientFields,fr.istic.gaegwt.shared.ElectronicDevice,home
+fr.istic.gaegwt.shared.Heater, true, true, true, true, fr.istic.gaegwt.shared.Heater/3596806409, 3596806409
+@ClientFields,fr.istic.gaegwt.shared.Heater,home
+fr.istic.gaegwt.shared.Home, true, true, true, true, fr.istic.gaegwt.shared.Home/4044550128, 4044550128
+@ClientFields,fr.istic.gaegwt.shared.Home,id,nbpieces,superficie,adresse,ip,person
+fr.istic.gaegwt.shared.Person, true, true, true, true, fr.istic.gaegwt.shared.Person/3863917896, 3863917896
+@ClientFields,fr.istic.gaegwt.shared.Person,id,nom,prenom,mail,genre,profil,dateNaiss
+java.lang.Exception, true, false, true, false, java.lang.Exception/1920171873, 1920171873
+java.lang.RuntimeException, true, false, true, false, java.lang.RuntimeException/515124647, 515124647
+java.lang.String, true, true, true, true, java.lang.String/2004016611, 2004016611
+java.lang.Throwable, true, false, true, false, java.lang.Throwable/2953622131, 2953622131
+java.sql.Date, true, true, true, true, java.sql.Date/730999118, 730999118
+java.sql.Time, true, true, true, true, java.sql.Time/1816797103, 1816797103
+java.sql.Timestamp, true, true, true, true, java.sql.Timestamp/3040052672, 3040052672
+java.util.Date, true, true, true, true, java.util.Date/3385151746, 3385151746

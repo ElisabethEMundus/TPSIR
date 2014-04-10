@@ -1,5 +1,6 @@
 package fr.istic.gaegwt.shared;
 
+import java.beans.Transient;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
@@ -8,26 +9,27 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import org.datanucleus.api.jpa.annotations.Extension;
+
 @XmlRootElement
 @Entity
 public class Person implements Serializable {
 
-	private Long id;
+	private String id;
 
 	private String nom, prenom, mail, genre, profil;
 	private Date dateNaiss;
-	private List<Home> residences;
-	private List<Person> listAmis;
+
 
 	public Person() {
-		// TODO Auto-generated constructor stub
 	}
-	
+	 
 
 	public Person(String nom, String prenom, String mail, String genre, String profil, Date dateNaiss) {
 
@@ -37,8 +39,6 @@ public class Person implements Serializable {
 		this.dateNaiss=dateNaiss;
 		this.genre=genre;
 		this.profil=profil;
-		this.residences=new ArrayList<Home>();
-		this.listAmis=new ArrayList<Person>();
 	}
 
 
@@ -73,15 +73,16 @@ public class Person implements Serializable {
 
 
 	@Id
-	@GeneratedValue
-	public Long getId() {
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Extension(vendorName = "datanucleus", key = "gae.encoded-pk", value = "true")
+	public String getId() {
 		return id;
 	}
 
 
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setId(String id) {
+		this.id = id; 
 	}
 
 
@@ -121,27 +122,7 @@ public class Person implements Serializable {
 	}
 
 
-	@OneToMany(mappedBy = "person", cascade = CascadeType.PERSIST)
-	public List<Home> getResidences() {
-		return residences;
-	}
 
-
-
-	public void setResidences(List<Home> residences) {
-		this.residences = residences;
-	}
-
-	@ManyToMany( cascade = CascadeType.PERSIST)
-	//@JoinColumn(name="friendid")
-	public List<Person> getListAmis() {
-		return listAmis;
-	}
-
-
-	public void setListAmis(List<Person> listAmis) {
-		this.listAmis = listAmis;
-	}
 
 	
 

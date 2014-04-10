@@ -4,6 +4,7 @@ import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.RootPanel;
@@ -77,10 +78,10 @@ public class GaeGwt implements EntryPoint {
 					@Override
 					public void onSuccess(Person result) {
 						// TODO Auto-generated method stub
-						RootPanel.get("Personne").setVisible(false);
 						person = result;
-						RootPanel.get("Home").setVisible(true);
+						Window.alert("personn cree");
 					}
+						
 				});
 
 
@@ -104,10 +105,8 @@ public class GaeGwt implements EntryPoint {
 					@Override
 					public void onSuccess(Home result) {
 						// TODO Auto-generated method stub
-						RootPanel.get("Personne").setVisible(false);
-						RootPanel.get("Home").setVisible(false);
 						home = result;
-						RootPanel.get("Appareil").setVisible(true);
+						
 					}
 				});
 
@@ -117,23 +116,23 @@ public class GaeGwt implements EntryPoint {
 		});
 
 
-		RootPanel.get("Personne").add(namePerson);
-		RootPanel.get("Personne").add(firstNamePerson);
-		RootPanel.get("Personne").add(mailPerson);
-		RootPanel.get("Personne").add(genrePerson);
-		RootPanel.get("Personne").add(profilPerson);
-		RootPanel.get("Personne").add(birthDatePerson);
+		RootPanel.get().add(namePerson);
+		RootPanel.get().add(firstNamePerson);
+		RootPanel.get().add(mailPerson);
+		RootPanel.get().add(genrePerson);
+		
+		RootPanel.get().add(sendHome);
+		RootPanel.get().add(sendPerson);
+		RootPanel.get().add(profilPerson);
+		RootPanel.get().add(birthDatePerson);
 
-		RootPanel.get("Home").add(nbpieces);
-		RootPanel.get("Home").add(superficie);
-		RootPanel.get("Home").add(adresse);
-		RootPanel.get("Home").add(ip);
+		RootPanel.get().add(nbpieces);
+		RootPanel.get().add(superficie);
+		RootPanel.get().add(adresse);
+		RootPanel.get().add(ip);
 
-		RootPanel.get("Appareil").add(consoMoy);
+		RootPanel.get().add(consoMoy);
 
-		RootPanel.get("Personne").setVisible(true);
-		RootPanel.get("Home").setVisible(false);
-		RootPanel.get("Appareil").setVisible(false);
 
 	}
 }
