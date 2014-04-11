@@ -15,7 +15,7 @@ import fr.istic.gaegwt.shared.Home;
 import fr.istic.gaegwt.shared.Person;
 
 
-@RemoteServiceRelativePath("conso")
+@RemoteServiceRelativePath("consommation")
 public interface GestionConso extends RemoteService{	
 	public Person createPerson(Person p) ;
 	public Home createHome(Person p,Home h);

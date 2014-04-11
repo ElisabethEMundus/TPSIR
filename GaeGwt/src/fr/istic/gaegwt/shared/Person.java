@@ -24,14 +24,14 @@ public class Person implements Serializable {
 	private String id;
 
 	private String nom, prenom, mail, genre, profil;
-	private Date dateNaiss;
+	private String dateNaiss;
 
 
 	public Person() {
 	}
 	 
 
-	public Person(String nom, String prenom, String mail, String genre, String profil, Date dateNaiss) {
+	public Person(String nom, String prenom, String mail, String genre, String profil, String dateNaiss) {
 
 		this.nom = nom;
 		this.prenom = prenom;
@@ -62,12 +62,12 @@ public class Person implements Serializable {
 	}
 
 
-	public Date getDateNaiss() {
+	public String getDateNaiss() {
 		return dateNaiss;
 	}
 
 
-	public void setDateNaiss(Date dateNaiss) {
+	public void setDateNaiss(String dateNaiss) {
 		this.dateNaiss = dateNaiss;
 	}
 

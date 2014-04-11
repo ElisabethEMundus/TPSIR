@@ -1,0 +1,2 @@
+serviceClass: fr.istic.gaegwt.client.GestionConso
+path: 9844C454CB694ABFEA5DF9945F06688D.gwt.rpc

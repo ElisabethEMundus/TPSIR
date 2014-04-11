@@ -41,14 +41,13 @@ public class Conso  extends RemoteServiceServlet implements GestionConso{
 	@Override
 	public Person createPerson(Person p)  {
 		// TODO Auto-generated method stub
-		
+		Person y = new Person(p.getNom(), p.getPrenom(), p.getMail(), p.getGenre(), p.getProfil(), null);
 		EntityTransaction t =  manager.getTransaction();
 		if (!t.isActive())
 			t.begin();
-		manager.persist(p);
+		manager.persist(y);
 		t.commit();
-		p.setDateNaiss(null);
-		return p;
+		return y;
 	}
 
 

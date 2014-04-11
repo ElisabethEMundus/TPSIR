@@ -7,15 +7,16 @@
 
   <!-- Servlets -->
   <servlet>
-    <servlet-name>toto</servlet-name>
-    <servlet-class>fr.istic.gaegwt.server.Conso</servlet-class>
-  </servlet>
-  
-  <servlet-mapping>
-    <servlet-name>toto</servlet-name>
-    <url-pattern>/gaegwt/conso</url-pattern>
-  </servlet-mapping>
-  
+		<servlet-name>servletConso</servlet-name>
+		<servlet-class>fr.istic.gaegwt.server.Conso</servlet-class>
+	</servlet>
+	
+	
+	<servlet-mapping>
+		<servlet-name>servletConso</servlet-name>
+		<url-pattern>/gaegwt/consommation</url-pattern>
+	</servlet-mapping>
+	
   <!-- Default page to serve -->
   <welcome-file-list>
     <welcome-file>GaeGwt.html</welcome-file>
