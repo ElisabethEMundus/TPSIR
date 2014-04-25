@@ -1,7 +1,5 @@
 package fr.istic.gaegwt.server;
 
-import java.text.ParseException;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -33,7 +31,6 @@ public class Conso  extends RemoteServiceServlet implements GestionConso{
 	public void init() throws ServletException {
 		// TODO Auto-generated method stub
 		super.init();
-
 		factory = Persistence.createEntityManagerFactory("mysqltest");
 		manager = factory.createEntityManager();
 	}

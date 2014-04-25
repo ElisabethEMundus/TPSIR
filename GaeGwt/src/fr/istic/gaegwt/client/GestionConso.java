@@ -1,12 +1,5 @@
 package fr.istic.gaegwt.client;
 
-import java.text.ParseException;
-import java.util.List;
-
-
-
-import javax.persistence.EntityManager;
-
 import com.google.gwt.user.client.rpc.RemoteService;
 import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 

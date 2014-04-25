@@ -28,12 +28,6 @@
      <!-- <class>org.hibernate.ejb.test.Cat</class> -->
      <!--  <class>org.hibernate.ejb.test.Distributor</class> -->
      <!--  <class>org.hibernate.ejb.test.Item</class> -->
-      <provider>org.datanucleus.jpa.PersistenceProviderImpl</provider>
-   	 	<class>fr.istic.gaegwt.server.Conso</class>
-   		<class>fr.istic.gaegwt.client.GestionConso</class>
-   		<class>fr.istic.gaegwt.client.GestionConsoAsync</class>
-   		<class>fr.istic.gaegwt.client.GaeGwt</class>
-    	<exclude-unlisted-classes>true</exclude-unlisted-classes>
       <properties>
           <property name="hibernate.archive.autodetection" value="class, hbm"/>
 		<property name="hibernate.show_sql" value="true"/>

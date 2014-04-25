@@ -17,6 +17,12 @@ import org.datanucleus.api.jpa.annotations.Extension;
 public class Appareil implements Serializable{
  
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1433427382617591074L;
+
+
 	public Appareil() {
 	}
 	

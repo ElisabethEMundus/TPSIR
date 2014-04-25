@@ -1,18 +1,11 @@
 package fr.istic.gaegwt.shared;
 
-import java.beans.Transient;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import org.datanucleus.api.jpa.annotations.Extension;
@@ -20,6 +13,12 @@ import org.datanucleus.api.jpa.annotations.Extension;
 @XmlRootElement
 @Entity
 public class Person implements Serializable {
+
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 576992120225573743L;
 
 	private String id;
 

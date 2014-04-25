@@ -3,17 +3,16 @@ package fr.istic.gaegwt.shared;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.xml.bind.annotation.XmlRootElement;
-
-import org.datanucleus.api.jpa.annotations.Extension;
 
 @XmlRootElement
 @Entity
 public class ElectronicDevice extends Appareil implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5961324042629477435L;
 	private Home home;
 
 	public ElectronicDevice(int consoMoy) {

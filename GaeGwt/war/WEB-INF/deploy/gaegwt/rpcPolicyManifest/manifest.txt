@@ -1,2 +1,3 @@
 # Module gaegwt
 # RPC service class, partial path of RPC policy file
+fr.istic.gaegwt.client.GestionConso, 9844C454CB694ABFEA5DF9945F06688D.gwt.rpc
